@@ -24,8 +24,7 @@ def conteggio():
     print(f"la lista contiente {cont} elementi")
 
 def svuotaLista():
-    for i in range(len(lista)):
-        lista.remove(lista[i-1])
+    lista.clear()
 
 controllo = True
 while controllo:
