@@ -17,11 +17,24 @@ def eliminaElemento():
     else:
         print("Elemento non trovato nella lista.")
 
+def conteggio():
+    cont = 0
+    for i in range(len(lista)):
+        cont += 1
+    print(f"la lista contiente {cont} elementi")
+
+def svuotaLista():
+    for i in range(len(lista)):
+        lista.remove(lista[i-1])
+
 controllo = True
 while controllo:
+    print("----------------------------------")
     print("1) aggiungi un numero alla lista")
     print("2) visualizza la lista")
     print("3) elimina un elemento dalla lista")
+    print("4) numero di elementi contenuti nella lista")
+    print("5) svuota la lista")
     x = input("Inserisci il numero dell'azione che vuoi eseguire: ")
 
     try:
@@ -32,6 +45,10 @@ while controllo:
             stampaLista()
         elif x == 3:
             eliminaElemento()
+        elif x == 4:
+            conteggio()
+        elif x == 5:
+            svuotaLista()
         else:
             uscita = input("Vuoi uscire (y/n): ")
             uscita = uscita.lower()
